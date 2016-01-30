@@ -68,7 +68,7 @@
       </a> -->
 
         <ion-list>
-          <ion-item class="list card" ng-repeat="item in items" ng-show="authData.User">
+          <ion-item class="list card" ng-repeat="item in items">
             <div class="item item-avatar">
               <img src="">
               <h2></h2>
@@ -80,13 +80,13 @@
             </div>
 
             <div class="item">
-                {{item.Votes}}
+              Votes: {{item.Votes}}
             </div>
 
           </ion-item>
         </ion-list>
 
-        <div ng-click='login()'  class="bar bar-footer bar-balanced">
+        <div ng-click="login()" class="bar bar-footer bar-balanced bottom">
           <div class="title">Login</div>
         </div>
 
