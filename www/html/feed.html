@@ -1,0 +1,38 @@
+<ion-view view-title='feed'>
+  <ion-content ng-controller="mainCtrl">
+    <!-- <ion-item class="top">
+      <h1 class="title">Items</h1>
+        <button class="button button-icon ion-plus" >
+      </button>
+    </ion-item> -->
+
+      <ion-list class="feed">
+        <ion-item class="list card" ng-repeat="item in items | orderBy: Votes | limitTo:limit">
+          <div class="item item-avatar">
+            <img src="">
+            <h2></h2>
+            <p></p>
+          </div>
+
+          <div id="imageContainer" class="item item-image">
+            <img ng-src="{{item.image}}">
+          </div>
+
+          <div class="row">
+          <div class='col col-50'>
+            <div class='col col-top col-50' ng-click='voteUp()'>
+              <i class='ion-chevron-up' ></i>
+            </div>
+            <div class='col col-bottom col-25' ng-click='voteDown()'>
+              <i class='ion-chevron-down' ></i>
+            </div>
+          </div>
+          <div class="col col-center col-50">
+              Votes: {{item.Votes}}
+          </div>
+        </div>
+
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
